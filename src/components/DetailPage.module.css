@@ -1,0 +1,116 @@
+.page { background: #f0f0f0; min-height: 100vh; }
+
+/* Hero */
+.hero { position: relative; height: 220px; overflow: hidden; border-bottom: 4px solid #000; }
+.heroImg { width: 100%; height: 100%; object-fit: cover; filter: saturate(1.3) contrast(1.1); display: block; }
+.heroBg { width: 100%; height: 100%; background: var(--bg, #fff5f5); }
+.heroFade {
+  position: absolute; inset: 0;
+  background: linear-gradient(0deg, rgba(0,0,0,.75) 0%, rgba(0,0,0,.1) 55%, transparent 100%);
+}
+
+/* Starburst */
+.starBurst {
+  position: absolute; top: 10px; right: 10px; width: 56px; height: 56px;
+  background: var(--tc, #e8192c);
+  clip-path: polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);
+  display: flex; align-items: center; justify-content: center; z-index: 3;
+}
+.starTxt {
+  font-family: 'Bangers', cursive; font-size: 7.5px; color: #fff;
+  text-align: center; line-height: 1.1; text-shadow: 1px 1px 0 #000; padding: 0 4px;
+}
+
+.heroTitles { position: absolute; bottom: 0; left: 0; right: 0; padding: .75rem .9rem .7rem; z-index: 2; }
+.catPill {
+  display: inline-block; background: var(--tc, #e8192c); color: #fff; border: 2px solid #000;
+  font-family: 'Bangers', cursive; font-size: 9px; letter-spacing: 2px; padding: 2px 10px; margin-bottom: .35rem;
+}
+.name {
+  font-family: 'Bangers', cursive; color: #fff; font-size: 22px;
+  letter-spacing: 2px; line-height: 1.15;
+  text-shadow: 3px 3px 0 #000, 4px 4px 0 var(--tc, #e8192c);
+  font-weight: 400;
+}
+
+/* Main panel */
+.panel {
+  background: #fff; border: 3px solid #000; border-radius: 2px;
+  margin: .75rem; box-shadow: 4px 4px 0 #000; overflow: hidden;
+}
+.panelHeader {
+  background: var(--tc, #e8192c); border-bottom: 3px solid #000;
+  padding: .5rem .9rem; display: flex; align-items: center; justify-content: space-between;
+}
+.panelPrice {
+  font-family: 'Bangers', cursive; color: #fff; font-size: 22px;
+  letter-spacing: 2px; text-shadow: 2px 2px 0 #000;
+}
+.panelTag {
+  background: #ffd700; color: #000; border: 2px solid #000;
+  font-family: 'Bangers', cursive; font-size: 9px; letter-spacing: 2px;
+  padding: 3px 10px; clip-path: polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%);
+}
+.panelBody { padding: .9rem .9rem 1rem; background: var(--bg, #fff5f5); }
+
+/* Speech bubble */
+.speechBubble {
+  background: #fff; border: 3px solid #000; border-radius: 6px 6px 6px 0;
+  padding: .7rem .85rem; margin-bottom: .8rem; position: relative;
+  box-shadow: 3px 3px 0 #000;
+}
+.speechBubble::after {
+  content: ''; position: absolute; bottom: -12px; left: 14px;
+  border-left: 6px solid transparent; border-top: 12px solid #000;
+}
+.speechBubble::before {
+  content: ''; position: absolute; bottom: -8px; left: 16px;
+  border-left: 4px solid transparent; border-top: 9px solid #fff; z-index: 1;
+}
+.speechTitle { font-family: 'Bangers', cursive; font-size: 9px; letter-spacing: 3px; color: var(--tc, #e8192c); display: block; margin-bottom: .35rem; }
+.speechDesc { font-family: 'Comic Neue', sans-serif; font-size: 13.5px; line-height: 1.7; color: #000; font-style: italic; }
+
+/* Ingredients */
+.ingsSection { margin: .9rem 0 .8rem; }
+.ingsLabel {
+  font-family: 'Bangers', cursive; font-size: 9px; letter-spacing: 3px; color: #000;
+  display: block; margin-bottom: .35rem; border-bottom: 2px solid #000; padding-bottom: 3px;
+}
+.ings { display: flex; flex-wrap: wrap; gap: 5px; }
+.ing {
+  background: var(--ts, #ffd700); color: #000; border: 2px solid #000;
+  font-family: 'Comic Neue', sans-serif; font-weight: 700; font-size: 11px;
+  padding: 3px 8px; border-radius: 1px; box-shadow: 1px 1px 0 #000;
+}
+
+/* Thought bubble */
+.thoughtBubble {
+  background: #fff; border: 3px solid #000; border-radius: 14px;
+  padding: .75rem .85rem; position: relative; margin-top: .75rem; box-shadow: 3px 3px 0 #000;
+}
+.dot1 { position: absolute; background: #fff; border: 2.5px solid #000; border-radius: 50%; bottom: -6px; left: 18px; width: 8px; height: 8px; }
+.dot2 { position: absolute; background: #fff; border: 2.5px solid #000; border-radius: 50%; bottom: -12px; left: 12px; width: 5px; height: 5px; }
+.dot3 { position: absolute; background: #fff; border: 2px solid #000; border-radius: 50%; bottom: -17px; left: 8px; width: 3px; height: 3px; }
+.thoughtTitle { font-family: 'Bangers', cursive; font-size: 9px; letter-spacing: 3px; color: var(--tc, #e8192c); display: block; margin-bottom: .3rem; }
+.thoughtTxt { font-family: 'Comic Neue', sans-serif; font-size: 13px; line-height: 1.7; color: #333; font-style: italic; }
+
+/* Gallery */
+.gallery {
+  background: #fff; border: 3px solid #000; margin: .75rem;
+  box-shadow: 4px 4px 0 #000; overflow: hidden;
+}
+.galHdr {
+  background: var(--tc, #e8192c); border-bottom: 3px solid #000;
+  padding: .45rem .9rem; display: flex; align-items: center; justify-content: space-between;
+}
+.galTitle { font-family: 'Bangers', cursive; color: #fff; font-size: 11px; letter-spacing: 2px; text-shadow: 1px 1px 0 #000; }
+.galCount { background: #ffd700; color: #000; border: 1.5px solid #000; font-family: 'Bangers', cursive; font-size: 9px; padding: 1px 7px; }
+.galGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; background: #000; padding: 3px; }
+.galHint { background: #000; padding: .35rem; text-align: center; font-family: 'Bangers', cursive; color: #ffd700; font-size: 9px; letter-spacing: 2px; }
+
+/* Gallery cells */
+.gCell { aspect-ratio: 1/1; overflow: hidden; cursor: pointer; position: relative; }
+.gImg { width: 100%; height: 100%; object-fit: cover; display: block; filter: saturate(1.2); transition: transform .3s, filter .2s; }
+.gImgZoom { width: 100%; height: 100%; object-fit: cover; display: block; filter: saturate(1.6) contrast(1.1); transform: scale(1.08); transition: transform .3s, filter .2s; }
+.gFrame { position: absolute; inset: 0; border: 3px solid transparent; transition: border-color .15s; pointer-events: none; }
+.gFrameHov { border-color: var(--tc, #e8192c); }

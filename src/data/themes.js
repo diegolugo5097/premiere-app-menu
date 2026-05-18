@@ -1,0 +1,51 @@
+export const CATEGORY_THEMES = {
+  "Cafés":        "th-noir",
+  "Bebidas Frías":"th-scifi",
+  "Comidas":      "th-action",
+  "Postres":      "th-comedy",
+  "Cócteles":     "th-horror",
+  "Especiales":   "th-marvel",
+};
+
+export const ITEM_THEMES = {
+  "The Dark Knight Espresso":       "th-noir",
+  "Iron Man Americano":             "th-marvel",
+  "Superman Blue Latte":            "th-dc",
+  "Joker Cappuccino":               "th-horror",
+  "Inception Cold Brew":            "th-scifi",
+  "El Padrino Macchiato":           "th-noir",
+  "Avengers Frappé":                "th-marvel",
+  "Guardianes del Galaxia Smoothie":"th-scifi",
+  "Matrix Green Tea Latte":         "th-scifi",
+  "Wonder Woman Limonada":          "th-dc",
+  "Spiderman Granizado":            "th-marvel",
+  "Jurassic Tropical Punch":        "th-action",
+  "Burger Pulp Fiction":            "th-noir",
+  "The Godfather Sándwich":         "th-noir",
+  "Thor Patacón":                   "th-marvel",
+  "Hulk Bowl":                      "th-comedy",
+  "E.T. Wrap Vegetal":              "th-scifi",
+  "Star Wars Quesadilla":           "th-scifi",
+  "Deadpool Nachos":                "th-marvel",
+  "Black Panther Rice Bowl":        "th-marvel",
+  "Loki Cheesecake":                "th-horror",
+  "Willy Wonka Brownie":            "th-comedy",
+  "Captain America Pancakes":       "th-dc",
+  "Alien Helado Verde":             "th-scifi",
+  "Interstellar Tiramisú":          "th-scifi",
+  "Venom Dark Chocolate":           "th-horror",
+  "Mojito Tarantino":               "th-noir",
+  "Thor Sangría":                   "th-marvel",
+  "Poison Ivy Cóctel":              "th-horror",
+  "Margarita Scarlett":             "th-retro",
+  "Kryptonite Shot":                "th-dc",
+  "The One Negroni":                "th-noir",
+  "Deadpool Combo":                 "th-marvel",
+  "The IMAX Experience":            "th-action",
+  "Director's Cut Picada":          "th-noir",
+  "Villain's Feast":                "th-horror",
+};
+
+export function getItemTheme(name, cat) {
+  return ITEM_THEMES[name] || CATEGORY_THEMES[cat] || "th-action";
+}

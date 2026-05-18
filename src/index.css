@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Oswald:wght@700&family=Comic+Neue:ital,wght@0,700;1,400&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ── 8 COMIC THEMES ── */
+.th-marvel { --tc: #e8192c; --ts: #ffd700; --bg: #fff5f5; --ink: #1a0005; }
+.th-dc     { --tc: #0057e7; --ts: #ffd700; --bg: #f0f5ff; --ink: #00052a; }
+.th-noir   { --tc: #222;    --ts: #f5c518; --bg: #f8f8f8; --ink: #111;    }
+.th-scifi  { --tc: #00b4d8; --ts: #7b2ff7; --bg: #f0fbff; --ink: #001a2e; }
+.th-action { --tc: #ff6b00; --ts: #ffd700; --bg: #fff8f0; --ink: #1a0800; }
+.th-horror { --tc: #6b00d3; --ts: #ff003c; --bg: #f8f0ff; --ink: #0d0018; }
+.th-comedy { --tc: #f5c518; --ts: #ff6b00; --bg: #fffef0; --ink: #1a1400; }
+.th-retro  { --tc: #e91e8c; --ts: #00e5cc; --bg: #fff0f8; --ink: #1a0010; }
+
+html, body {
+  background: #f0f0f0;
+  font-family: 'Comic Neue', sans-serif;
+  min-height: 100vh;
+}
+
+#root { min-height: 100vh; }
+img { display: block; }
+button { cursor: pointer; font-family: inherit; }
+
+/* Halftone utility classes */
+.dots {
+  background-image: radial-gradient(circle, rgba(0,0,0,.12) 1.5px, transparent 1.5px);
+  background-size: 12px 12px;
+}
+.dots-color {
+  background-image: radial-gradient(circle, rgba(0,0,0,.07) 1.5px, transparent 1.5px);
+  background-size: 10px 10px;
+}

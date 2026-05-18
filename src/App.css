@@ -1,0 +1,27 @@
+.app-hdr {
+  background: #ffd700;
+  border-bottom: 4px solid #000;
+  padding: .5rem .9rem .45rem;
+  position: sticky; top: 0; z-index: 300;
+}
+.app-hdr-row {
+  display: flex; align-items: center; justify-content: space-between;
+}
+.app-logo {
+  flex: 1; text-align: center; display: flex; align-items: center; justify-content: center;
+}
+.app-logo-img {
+  height: 52px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+.app-back {
+  background: #e8192c; border: 3px solid #000; color: #fff;
+  font-family: 'Bangers', cursive; font-size: 13px; padding: 5px 12px;
+  letter-spacing: 1px; cursor: pointer; border-radius: 2px;
+  box-shadow: 3px 3px 0 #000; transition: transform .1s, box-shadow .1s;
+  white-space: nowrap; flex-shrink: 0;
+}
+.app-back:active { transform: translate(3px,3px); box-shadow: none; }
+.app-spacer { width: 80px; flex-shrink: 0; }
